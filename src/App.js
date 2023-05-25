@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// import './reset.css';
+// import './App.scss';
+import {Routes, Route} from 'react-router-dom';
+import Home from './routes/home';
+import Screenshots from './routes/screenshots';
+import NoMatch from './routes/nomatch';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="wrapper">
+        <div className="logo">
+          Canipture!
+        </div>
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          className="menu"
+          href="/screenshots"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          ▷ Screenshots
         </a>
-      </header>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/screenshots" element={<Screenshots />} />
+          <Route path="*" element={<NoMatch />} />  
+        </Routes>
+        <div className="background"></div>
+      </div>
     </div>
   );
 }

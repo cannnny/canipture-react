@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./spl3(mono).jpg");
+  background-size: cover;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper .logo {
+  width: 80%;
+  top: 140px;
+  left: 60px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 80px;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000;
+  transform: rotate(-20deg);
+  position: absolute;
+  z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper .menu {
+  top: 75%;
+  left: 77%;
+  font-size: 45px;
+  position: absolute;
+  z-index: 1;
+  text-decoration: none;
+  color: #fff;
+  line-height: 1.6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wrapper .menu:hover {
+  color: #383c3c;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper .background {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  margin-right: -120px;
+  background-color: #fcc800;
+  transform: skew(-15deg, 0);
 }
