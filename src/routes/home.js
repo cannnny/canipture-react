@@ -1,6 +1,17 @@
+import '../Home.scss';
+import {Link} from 'react-router-dom';
+
 function Home(){
     return(
-        <h2>Home</h2>
+        <div className="wrapper">
+        <div className="logo">
+          Canipture!
+        </div>
+        <Link className="menuLink" to="/screenshots">
+          <span>▷</span>Screenshots
+        </Link>
+        <div className="background"></div>
+      </div>
     );
 }
 
