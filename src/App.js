@@ -1,18 +1,15 @@
-import './reset.css';
-import './App.scss';
-import {Routes, Route} from 'react-router-dom';
-import Home from './routes/home';
-import Screenshots from './routes/screenshots';
-import NoMatch from './routes/nomatch';
+import "./reset.css";
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
-      <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/screenshots" element={<Screenshots />} />
-          <Route path="*" element={<NoMatch />} />  
-      </Routes>
+      <header>
+        <div className="header-container">
+          <div className="logo">Canipture!</div>
+        </div>
+      </header>
+      <div className="main"></div>
     </div>
   );
 }
