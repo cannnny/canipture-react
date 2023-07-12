@@ -9,41 +9,24 @@ import "swiper/css";
 function App() {
   // Swiper
   const swiperParams = {
-    modules: Autoplay,
-
-    slidesPerView: 1, // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
-    spaceBetween: 5, // スライド間の余白（px）
-    centeredSlides: true, // アクティブなスライドを中央に配置する
-
-    loop: true, // 無限ループさせる
-
-    speed: 3000, // スライドアニメーションのスピード（ミリ秒）
-
+    modules: [Autoplay],
+    slidesPerView: 0.9,
+    spaceBetween: 10,
+    loop: true,
     autoplay: {
-      // 自動再生させる
-      delay: 3000, // 次のスライドに切り替わるまでの時間（ミリ秒）
-      disableOnInteraction: false, // ユーザーが操作しても自動再生を止めない
-      waitForTransition: false, // アニメーションの間も自動再生を止めない（最初のスライドの表示時間を揃えたいときに）
+      delay: 0,
+      disableOnInteraction: false,
     },
-
-    grabCursor: true, // PCでマウスカーソルを「掴む」マークにする
-    watchSlidesProgress: true, // スライドの進行状況を監視する
-
-    breakpoints: {
-      // ブレークポイント
-      600: {
-        // 画面幅600px以上で適用
-        slidesPerView: 2,
-      },
-      1025: {
-        // 画面幅1025px以上で適用
-        slidesPerView: 4,
-        spaceBetween: 32,
-      },
-    },
+    speed: 6000,
+    grabCursor: true,
+    watchSlidesProgress: true,
   };
 
-  // mapメソッドで配列をつくる
+  // 配列をつくる
+  const swiperArray1 = [1, 2, 3, 4, 5];
+  const swiperArray2 = [1, 2, 3, 4, 5];
+  const swiperArray3 = [1, 2, 3, 4, 5];
+  const swiperArray4 = [1, 2, 3, 4, 5];
 
   return (
     <div className="App">
@@ -51,11 +34,42 @@ function App() {
         <h1>Canipture!</h1>
       </header>
       <div className="contents">
-        <Swiper {...swiperParams}>
-          <SwiperSlide></SwiperSlide>
+        <Swiper {...swiperParams} className="swiper1">
+          {swiperArray1.map((slide) => {
+            return (
+              <SwiperSlide>
+                <img src={`../pictures/totk${slide}.jpg`} alt="" />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
-        <Swiper {...swiperParams}></Swiper>
-        <Swiper {...swiperParams}></Swiper>
+        <Swiper {...swiperParams} className="swiper2">
+          {swiperArray2.map((slide) => {
+            return (
+              <SwiperSlide>
+                <img src={`../pictures/spl${slide}.jpg`} alt="" />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+        <Swiper {...swiperParams} className="swiper3">
+          {swiperArray3.map((slide) => {
+            return (
+              <SwiperSlide>
+                <img src={`../pictures/mhsb${slide}.jpg`} alt="" />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+        <Swiper {...swiperParams} className="swiper4">
+          {swiperArray4.map((slide) => {
+            return (
+              <SwiperSlide>
+                <img src={`../pictures/ac${slide}.jpg`} alt="" />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
     </div>
   );
