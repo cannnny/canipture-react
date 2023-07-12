@@ -43,6 +43,8 @@ function App() {
     },
   };
 
+  // mapメソッドで配列をつくる
+
   return (
     <div className="App">
       <header>
