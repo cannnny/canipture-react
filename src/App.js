@@ -8,7 +8,7 @@ import "swiper/css";
 
 function App() {
   // Swiper
-  const swiperParams = {
+  const swiperParams1 = {
     modules: [Autoplay],
     slidesPerView: 0.9,
     spaceBetween: 10,
@@ -17,16 +17,25 @@ function App() {
       delay: 0,
       disableOnInteraction: false,
     },
-    speed: 6000,
+    speed: 7000,
     grabCursor: true,
     watchSlidesProgress: true,
   };
 
-  // 配列をつくる
-  const swiperArray1 = [1, 2, 3, 4, 5];
-  const swiperArray2 = [1, 2, 3, 4, 5];
-  const swiperArray3 = [1, 2, 3, 4, 5];
-  const swiperArray4 = [1, 2, 3, 4, 5];
+  const swiperParams2 = {
+    modules: [Autoplay],
+    slidesPerView: 0.9,
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      reverseDirection: true,
+    },
+    speed: 7000,
+    grabCursor: true,
+    watchSlidesProgress: true,
+  };
 
   return (
     <div className="App">
@@ -34,41 +43,57 @@ function App() {
         <h1>Canipture!</h1>
       </header>
       <div className="contents">
-        <Swiper {...swiperParams} className="swiper1">
-          {swiperArray1.map((slide) => {
-            return (
-              <SwiperSlide>
-                <img src={`../pictures/totk${slide}.jpg`} alt="" />
-              </SwiperSlide>
-            );
-          })}
+        <Swiper {...swiperParams1} className="swiper1">
+          {(() => {
+            const slides = [];
+            for (let i = 1; i < 6; i++) {
+              slides.push(
+                <SwiperSlide key={i}>
+                  <img src={`../pictures/totk${i}.jpg`} alt="" />
+                </SwiperSlide>
+              );
+            }
+            return slides;
+          })()}
         </Swiper>
-        <Swiper {...swiperParams} className="swiper2">
-          {swiperArray2.map((slide) => {
-            return (
-              <SwiperSlide>
-                <img src={`../pictures/spl${slide}.jpg`} alt="" />
-              </SwiperSlide>
-            );
-          })}
+        <Swiper {...swiperParams2} className="swiper2">
+          {(() => {
+            const slides = [];
+            for (let i = 1; i < 6; i++) {
+              slides.push(
+                <SwiperSlide key={i}>
+                  <img src={`../pictures/spl${i}.jpg`} alt="" />
+                </SwiperSlide>
+              );
+            }
+            return slides;
+          })()}
         </Swiper>
-        <Swiper {...swiperParams} className="swiper3">
-          {swiperArray3.map((slide) => {
-            return (
-              <SwiperSlide>
-                <img src={`../pictures/mhsb${slide}.jpg`} alt="" />
-              </SwiperSlide>
-            );
-          })}
+        <Swiper {...swiperParams1} className="swiper3">
+          {(() => {
+            const slides = [];
+            for (let i = 1; i < 6; i++) {
+              slides.push(
+                <SwiperSlide key={i}>
+                  <img src={`../pictures/mhsb${i}.jpg`} alt="" />
+                </SwiperSlide>
+              );
+            }
+            return slides;
+          })()}
         </Swiper>
-        <Swiper {...swiperParams} className="swiper4">
-          {swiperArray4.map((slide) => {
-            return (
-              <SwiperSlide>
-                <img src={`../pictures/ac${slide}.jpg`} alt="" />
-              </SwiperSlide>
-            );
-          })}
+        <Swiper {...swiperParams2} className="swiper4">
+          {(() => {
+            const slides = [];
+            for (let i = 1; i < 6; i++) {
+              slides.push(
+                <SwiperSlide key={i}>
+                  <img src={`../pictures/ac${i}.jpg`} alt="" />
+                </SwiperSlide>
+              );
+            }
+            return slides;
+          })()}
         </Swiper>
       </div>
     </div>
