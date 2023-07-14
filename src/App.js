@@ -6,11 +6,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
+// routes
+import { Routes, Route, Link } from "react-router-dom";
+import Menu from "./routes/menu";
+import Totk from "./routes/totk";
+import Spl from "./routes/spl";
+import Others from "./routes/others";
+
 function App() {
   // Swiper
   const swiperParams1 = {
     modules: [Autoplay],
-    slidesPerView: 0.9,
+    slidesPerView: 1.5,
     spaceBetween: 10,
     loop: true,
     autoplay: {
@@ -24,7 +31,7 @@ function App() {
 
   const swiperParams2 = {
     modules: [Autoplay],
-    slidesPerView: 0.9,
+    slidesPerView: 1.5,
     spaceBetween: 10,
     loop: true,
     autoplay: {
@@ -41,61 +48,80 @@ function App() {
     <div className="App">
       <header>
         <h1>Canipture!</h1>
+        <div className="slider">
+          <Swiper {...swiperParams1} className="swiper1">
+            {(() => {
+              const slides = [];
+              for (let i = 1; i < 10; i++) {
+                slides.push(
+                  <SwiperSlide key={i}>
+                    <img src={`../pictures/sw/totk-s${i}.jpg`} alt="" />
+                  </SwiperSlide>
+                );
+              }
+              return slides;
+            })()}
+          </Swiper>
+          <Swiper {...swiperParams2} className="swiper2">
+            {(() => {
+              const slides = [];
+              for (let i = 1; i < 10; i++) {
+                slides.push(
+                  <SwiperSlide key={i}>
+                    <img src={`../pictures/sw/spl-s${i}.jpg`} alt="" />
+                  </SwiperSlide>
+                );
+              }
+              return slides;
+            })()}
+          </Swiper>
+          <Swiper {...swiperParams1} className="swiper3">
+            {(() => {
+              const slides = [];
+              for (let i = 1; i < 10; i++) {
+                slides.push(
+                  <SwiperSlide key={i}>
+                    <img src={`../pictures/sw/ac-s${i}.jpg`} alt="" />
+                  </SwiperSlide>
+                );
+              }
+              return slides;
+            })()}
+          </Swiper>
+          <Swiper {...swiperParams2} className="swiper4">
+            {(() => {
+              const slides = [];
+              for (let i = 1; i < 10; i++) {
+                slides.push(
+                  <SwiperSlide key={i}>
+                    <img src={`../pictures/sw/mhsb-s${i}.jpg`} alt="" />
+                  </SwiperSlide>
+                );
+              }
+              return slides;
+            })()}
+          </Swiper>
+        </div>
       </header>
-      <div className="contents">
-        <Swiper {...swiperParams1} className="swiper1">
-          {(() => {
-            const slides = [];
-            for (let i = 1; i < 6; i++) {
-              slides.push(
-                <SwiperSlide key={i}>
-                  <img src={`../pictures/totk${i}.jpg`} alt="" />
-                </SwiperSlide>
-              );
-            }
-            return slides;
-          })()}
-        </Swiper>
-        <Swiper {...swiperParams2} className="swiper2">
-          {(() => {
-            const slides = [];
-            for (let i = 1; i < 6; i++) {
-              slides.push(
-                <SwiperSlide key={i}>
-                  <img src={`../pictures/spl${i}.jpg`} alt="" />
-                </SwiperSlide>
-              );
-            }
-            return slides;
-          })()}
-        </Swiper>
-        <Swiper {...swiperParams1} className="swiper3">
-          {(() => {
-            const slides = [];
-            for (let i = 1; i < 6; i++) {
-              slides.push(
-                <SwiperSlide key={i}>
-                  <img src={`../pictures/mhsb${i}.jpg`} alt="" />
-                </SwiperSlide>
-              );
-            }
-            return slides;
-          })()}
-        </Swiper>
-        <Swiper {...swiperParams2} className="swiper4">
-          {(() => {
-            const slides = [];
-            for (let i = 1; i < 6; i++) {
-              slides.push(
-                <SwiperSlide key={i}>
-                  <img src={`../pictures/ac${i}.jpg`} alt="" />
-                </SwiperSlide>
-              );
-            }
-            return slides;
-          })()}
-        </Swiper>
+      <div className="main">
+        <div className="container">
+          <h2>Canipture!とは</h2>
+          <p>
+            Nintendo
+            Switchで遊べるゲームのスクリーンショットを集めたギャラリーサイトです。
+          </p>
+          <button>
+            <Link to="/menu">enter</Link>
+          </button>
+          <Routes>
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/totk" element={<Totk />} />
+            <Route path="/spl" element={<Spl />} />
+            <Route path="/others" element={<Others />} />
+          </Routes>
+        </div>
       </div>
+      <footer>@2023 YUMI DOTERA</footer>
     </div>
   );
 }
