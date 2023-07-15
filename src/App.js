@@ -8,7 +8,6 @@ import "swiper/css";
 
 // routes
 import { Routes, Route, Link } from "react-router-dom";
-import Menu from "./routes/menu";
 import Totk from "./routes/totk";
 import Spl from "./routes/spl";
 import Others from "./routes/others";
@@ -114,7 +113,6 @@ function App() {
             <Link to="/menu">enter</Link>
           </button>
           <Routes>
-            <Route path="/menu" element={<Menu />} />
             <Route path="/totk" element={<Totk />} />
             <Route path="/spl" element={<Spl />} />
             <Route path="/others" element={<Others />} />
