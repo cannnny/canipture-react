@@ -51,28 +51,30 @@ function App() {
       <header>
         <h1>Canipture!</h1>
         <div className="slider">
-          <Link to="./routes/totk">
-            <Swiper {...swiperParams1} className="swiper1">
-              {(() => {
-                const slides = [];
-                for (let i = 1; i < 10; i++) {
-                  slides.push(
-                    <SwiperSlide key={i}>
+          <Swiper {...swiperParams1} className="swiper1">
+            {(() => {
+              const slides = [];
+              for (let i = 1; i < 10; i++) {
+                slides.push(
+                  <SwiperSlide key={i}>
+                    <Link to="/totk">
                       <img src={`../pictures/sw/totk-s${i}.jpg`} alt="" />
-                    </SwiperSlide>
-                  );
-                }
-                return slides;
-              })()}
-            </Swiper>
-          </Link>
+                    </Link>
+                  </SwiperSlide>
+                );
+              }
+              return slides;
+            })()}
+          </Swiper>
           <Swiper {...swiperParams2} className="swiper2">
             {(() => {
               const slides = [];
               for (let i = 1; i < 10; i++) {
                 slides.push(
                   <SwiperSlide key={i}>
-                    <img src={`../pictures/sw/spl-s${i}.jpg`} alt="" />
+                    <Link to="/spl">
+                      <img src={`../pictures/sw/spl-s${i}.jpg`} alt="" />
+                    </Link>
                   </SwiperSlide>
                 );
               }
@@ -85,7 +87,9 @@ function App() {
               for (let i = 1; i < 10; i++) {
                 slides.push(
                   <SwiperSlide key={i}>
-                    <img src={`../pictures/sw/ac-s${i}.jpg`} alt="" />
+                    <Link to="/ac">
+                      <img src={`../pictures/sw/ac-s${i}.jpg`} alt="" />
+                    </Link>
                   </SwiperSlide>
                 );
               }
@@ -98,7 +102,9 @@ function App() {
               for (let i = 1; i < 10; i++) {
                 slides.push(
                   <SwiperSlide key={i}>
-                    <img src={`../pictures/sw/mhsb-s${i}.jpg`} alt="" />
+                    <Link to="/mhsb">
+                      <img src={`../pictures/sw/mhsb-s${i}.jpg`} alt="" />
+                    </Link>
                   </SwiperSlide>
                 );
               }
