@@ -7,7 +7,7 @@ import Ac from "./ac";
 function Mhsb() {
   return (
     <div>
-      <h2>menu</h2>
+      <h2>モンスターハンター サンブレイク</h2>
       <Link to="/totk"></Link>
       <Link to="/spl"></Link>
       <Link to="/ac"></Link>

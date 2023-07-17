@@ -7,7 +7,7 @@ import Mhsb from "./mhsb";
 function Totk() {
   return (
     <div>
-      <h2>menu</h2>
+      <h2>ゼルダの伝説 ティアーズ オブ ザ キングダム</h2>
       <Link to="/spl"></Link>
       <Link to="/ac"></Link>
       <Link to="/mhsb"></Link>
