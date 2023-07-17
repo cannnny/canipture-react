@@ -7,7 +7,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 // routes
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import Totk from "./routes/totk";
 import Spl from "./routes/spl";
 import Ac from "./routes/ac";
@@ -27,6 +27,7 @@ function App() {
     speed: 7000,
     grabCursor: true,
     watchSlidesProgress: true,
+    threshold: 999999,
   };
 
   const swiperParams2 = {
@@ -42,6 +43,7 @@ function App() {
     speed: 7000,
     grabCursor: true,
     watchSlidesProgress: true,
+    threshold: 999999,
   };
 
   return (
@@ -49,19 +51,21 @@ function App() {
       <header>
         <h1>Canipture!</h1>
         <div className="slider">
-          <Swiper {...swiperParams1} className="swiper1">
-            {(() => {
-              const slides = [];
-              for (let i = 1; i < 10; i++) {
-                slides.push(
-                  <SwiperSlide key={i}>
-                    <img src={`../pictures/sw/totk-s${i}.jpg`} alt="" />
-                  </SwiperSlide>
-                );
-              }
-              return slides;
-            })()}
-          </Swiper>
+          <Link to="./routes/totk">
+            <Swiper {...swiperParams1} className="swiper1">
+              {(() => {
+                const slides = [];
+                for (let i = 1; i < 10; i++) {
+                  slides.push(
+                    <SwiperSlide key={i}>
+                      <img src={`../pictures/sw/totk-s${i}.jpg`} alt="" />
+                    </SwiperSlide>
+                  );
+                }
+                return slides;
+              })()}
+            </Swiper>
+          </Link>
           <Swiper {...swiperParams2} className="swiper2">
             {(() => {
               const slides = [];
