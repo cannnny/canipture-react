@@ -7,10 +7,11 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 // routes
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Totk from "./routes/totk";
 import Spl from "./routes/spl";
-import Others from "./routes/others";
+import Ac from "./routes/ac";
+import Mhsb from "./routes/mhsb";
 
 function App() {
   // Swiper
@@ -109,13 +110,11 @@ function App() {
             Nintendo
             Switchで遊べるゲームのスクリーンショットを集めたギャラリーサイトです。
           </p>
-          <button>
-            <Link to="/menu">enter</Link>
-          </button>
           <Routes>
             <Route path="/totk" element={<Totk />} />
             <Route path="/spl" element={<Spl />} />
-            <Route path="/others" element={<Others />} />
+            <Route path="/ac" element={<Ac />} />
+            <Route path="/mhsb" element={<Mhsb />} />
           </Routes>
         </div>
       </div>

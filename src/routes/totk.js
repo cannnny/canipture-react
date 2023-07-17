@@ -1,17 +1,20 @@
 // routes
 import { Routes, Route, Link } from "react-router-dom";
 import Spl from "./spl";
-import Others from "./others";
+import Ac from "./ac";
+import Mhsb from "./mhsb";
 
 function Totk() {
   return (
     <div>
       <h2>menu</h2>
       <Link to="/spl"></Link>
-      <Link to="/others"></Link>
+      <Link to="/ac"></Link>
+      <Link to="/mhsb"></Link>
       <Routes>
         <Route path="/spl" element={<Spl />} />
-        <Route path="/others" element={<Others />} />
+        <Route path="/ac" element={<Ac />} />
+        <Route path="/mhsb" element={<Mhsb />} />
       </Routes>
     </div>
   );
