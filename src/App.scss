@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+body {
+  background-color: #ffffff;
+}
 
 h1 {
   display: none;
@@ -35,4 +38,12 @@ h1 {
 footer {
   padding: 12px;
   text-align: center;
+}
+
+.screenshots {
+  color: #000000;
+  .menu {
+    height: 20px;
+    background-color: #cccccc;
+  }
 }
