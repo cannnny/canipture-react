@@ -3,10 +3,6 @@ body {
   background-color: #ffffff;
 }
 
-h1 {
-  display: none;
-}
-
 .slider {
   height: 100%;
   background-color: #000000;
@@ -25,13 +21,37 @@ h1 {
   .container {
     width: 90%;
     margin: 0 auto;
-  }
+    h1 {
+      display: none;
+    }
 
-  h2 {
-    font-size: 30px;
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      margin-top: 50px;
+    }
   }
-  p {
-    margin-top: 50px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 8px;
+  border-bottom: 3px solid #cccccc;
+  .header-left {
+    color: #000000;
+    font-size: 12px;
+    font-family: "Press Start 2P";
+  }
+  .header-right {
+    display: flex;
+    .icon {
+      width: 40px;
+      padding: 0 3px;
+    }
   }
 }
 
@@ -41,9 +61,6 @@ footer {
 }
 
 .screenshots {
+  padding: 20px 10px;
   color: #000000;
-  .menu {
-    height: 20px;
-    background-color: #cccccc;
-  }
 }
