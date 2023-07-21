@@ -1,14 +1,13 @@
-import { Link } from "react-router-dom";
+import Header from "./Header";
 
 const Ac = () => {
   return (
-    <div>
-      <h2>あつまれ どうぶつの森</h2>
-      <Link to="/totk"></Link>
-      <Link to="/spl"></Link>
-      <Link to="/mhsb"></Link>
-      <Link to="/"></Link>
-    </div>
+    <>
+      <Header />
+      <div className="screenshots">
+        <h2>あつまれ どうぶつの森</h2>
+      </div>
+    </>
   );
 };
 

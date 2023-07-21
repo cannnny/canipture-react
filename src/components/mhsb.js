@@ -1,14 +1,13 @@
-import { Link } from "react-router-dom";
+import Header from "./Header";
 
 const Mhsb = () => {
   return (
-    <div>
-      <h2>モンスターハンター サンブレイク</h2>
-      <Link to="/totk"></Link>
-      <Link to="/spl"></Link>
-      <Link to="/ac"></Link>
-      <Link to="/"></Link>
-    </div>
+    <>
+      <Header />
+      <div className="screenshots">
+        <h2>モンスターハンター サンブレイク</h2>
+      </div>
+    </>
   );
 };
 

@@ -1,14 +1,13 @@
-import { Link } from "react-router-dom";
+import Header from "./Header.js";
 
 const Spl = () => {
   return (
-    <div>
-      <h2>Splatoon3</h2>
-      <Link to="/totk"></Link>
-      <Link to="/ac"></Link>
-      <Link to="/mhsb"></Link>
-      <Link to="/"></Link>
-    </div>
+    <>
+      <Header />
+      <div className="screenshots">
+        <h2>Splatoon3</h2>
+      </div>
+    </>
   );
 };
 
