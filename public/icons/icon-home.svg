@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-  <defs>
-    <style>
-      .cls-1 {
-        stroke-width: 15px;
-      }
-
-      .cls-1, .cls-2 {
-        fill: none;
-        stroke: #000;
-        stroke-miterlimit: 10;
-      }
-
-      .cls-2 {
-        stroke-width: 20px;
-      }
-    </style>
-  </defs>
-  <rect class="cls-2" x="33.3" y="73.9" width="133.4" height="116.1"/>
+  <path d="m176.7,200H23.3V63.9h153.4v136.1Zm-133.4-20h113.4v-96.1H43.3v96.1Z"/>
   <polygon points="200 83.9 0 83.9 100 0 200 83.9"/>
-  <line class="cls-1" x1="41.72" y1="131.95" x2="158.28" y2="131.95"/>
-  <line class="cls-1" x1="100" y1="62.89" x2="100" y2="189.17"/>
+  <rect x="41.72" y="124.45" width="116.56" height="15"/>
+  <rect x="92.5" y="62.89" width="15" height="126.27"/>
 </svg>
