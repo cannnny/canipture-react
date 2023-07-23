@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <g id="_瓶" data-name="瓶">
+    <rect y="0" width="46.82" height="19.55"/>
+    <rect x="153.18" width="46.58" height="19.55"/>
+    <rect x="-62.22" y="114.37" width="147.86" height="23.41" transform="translate(137.78 114.37) rotate(90)"/>
+    <rect x="114.37" y="114.37" width="147.86" height="23.41" transform="translate(314.37 -62.22) rotate(90)"/>
+    <rect y="180.45" width="200" height="19.55" transform="translate(200 380.45) rotate(180)"/>
+    <rect x="18.82" y="24.14" width="32.59" height="23.41" transform="translate(70.96 .74) rotate(90)"/>
+    <rect x="148.59" y="24.14" width="32.59" height="23.41" transform="translate(200.74 -129.04) rotate(90)"/>
+    <rect y="52.14" width="46.82" height="19.55"/>
+    <rect x="153.18" y="52.14" width="46.58" height="19.55"/>
+    <rect x="32.65" y="105.34" width="135.43" height="66.69"/>
+  </g>
+  <g id="_うずまき" data-name="うずまき">
+    <rect x="91.06" y="78.29" width="15.96" height="23.41" transform="translate(189.04 -9.04) rotate(90)"/>
+    <polygon points="93.47 95.24 58.72 63.51 75.99 50.31 110.75 82.04 93.47 95.24"/>
+    <rect x="53.23" y="34.51" width="34.55" height="23.41" transform="translate(116.72 -24.29) rotate(90)"/>
+    <rect x="123.77" y="27.71" width="19.74" height="23.41" transform="translate(173.05 -94.22) rotate(90)"/>
+    <rect x="81.77" y="9.59" width="39.72" height="19.55" transform="translate(203.26 38.74) rotate(180)"/>
+    <rect x="109.44" y="45.37" width="26.19" height="19.55" transform="translate(245.07 110.3) rotate(180)"/>
+    <polygon points="58.65 29 81.76 9.69 98.32 23.52 75.2 42.82 58.65 29"/>
+    <polygon points="105.02 23.4 128.73 43.2 145.28 29.38 121.58 9.58 105.02 23.4"/>
+    <polygon points="114.83 55.91 124.62 40.18 145.39 49.19 135.6 64.93 114.83 55.91"/>
+  </g>
+</svg>
