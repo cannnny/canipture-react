@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./components/home";
-import Totk from "./components/totk";
-import Spl from "./components/spl";
-import Ac from "./components/ac";
-import Mhsb from "./components/mhsb";
+import Home from "./components/Home";
+import Totk from "./components/Totk";
+import Spl from "./components/Spl";
+import Ac from "./components/Ac";
+import Mhsb from "./components/Mhsb";
 
 const RouterConfig = () => {
   return (
