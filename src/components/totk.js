@@ -1,4 +1,5 @@
 import Header from "./Header";
+import Gallery from "./Gallery";
 
 const Totk = () => {
   return (
@@ -9,15 +10,7 @@ const Totk = () => {
       </div>
       <div className="main-gallery">
         {/* コンポーネント化 */}
-        {(() => {
-          const gallery = [];
-          for (let i = 1; i < 100; i++) {
-            gallery.push(
-              <img src={`../pictures/gl/totk${i}.jpg`} alt="" key={i} />
-            );
-          }
-          return gallery;
-        })()}
+        <Gallery />
         {/* スクロールに応じてサムネを表示させるようにしたい */}
         {/* クリックしたら拡大させたい */}
       </div>
