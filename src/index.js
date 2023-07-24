@@ -6,10 +6,10 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
 const games = [
-  { name: "totk", reverseDirection: false },
-  { name: "spl", reverseDirection: true },
-  { name: "ac", reverseDirection: false },
-  { name: "mhsb", reverseDirection: true },
+  { name: "totk" },
+  { name: "spl" },
+  { name: "ac" },
+  { name: "mhsb" },
 ];
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
