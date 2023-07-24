@@ -1,14 +1,15 @@
 // Swiper
-import Slider from "./Slider.js";
+import Slider1 from "./Slider1.js";
+import Slider2 from "./Slider2.js";
 
 const Home = () => {
   return (
     <div className="home">
       <div className="slider">
-        <Slider name="totk" />
-        <Slider name="spl" />
-        <Slider name="ac" />
-        <Slider name="mhsb" />
+        <Slider1 name="totk" />
+        <Slider2 name="spl" />
+        <Slider1 name="ac" />
+        <Slider2 name="mhsb" />
       </div>
       <div className="main">
         <div className="container">
