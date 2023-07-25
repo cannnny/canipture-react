@@ -9,7 +9,7 @@ const Page = (props) => {
         <h2>{props.title}</h2>
       </div>
       <div className="main-gallery">
-        <Gallery games={props.games} name={props.path} />
+        <Gallery name={props.path} />
         {/* スクロールに応じてサムネを表示させるようにしたい */}
         {/* クリックしたら拡大させたい */}
       </div>
