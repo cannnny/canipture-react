@@ -9,8 +9,7 @@ const Page = (props) => {
         <h2>{props.title}</h2>
       </div>
       <div className="main-gallery">
-        {/* コンポーネント化し、ゲーム名で呼び出す */}
-        <Gallery name={props.path} />
+        <Gallery games={props.games} name={props.path} />
         {/* スクロールに応じてサムネを表示させるようにしたい */}
         {/* クリックしたら拡大させたい */}
       </div>

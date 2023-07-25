@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Slider = (props) => {
   const swiperParams = {
     modules: [Autoplay],
-    slidesPerView: 1.5,
+    slidesPerView: 3.5,
     spaceBetween: 10,
     loop: true,
     autoplay: {

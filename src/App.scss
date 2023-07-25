@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1&family=Press+Start+2P&display=swap");
 body {
   background-color: #ffffff;
+  font-family: "M PLUS 1", sans-serif;
 }
 
 .slider {
-  height: 100%;
   background-color: #000000;
 
   .swiper-wrapper {
@@ -27,9 +27,15 @@ body {
 
     h2 {
       font-size: 30px;
+      @media all and (min-width: 1024px) {
+        font-size: 40px;
+      }
     }
     p {
       margin-top: 50px;
+      @media all and (min-width: 1024px) {
+        font-size: 22px;
+      }
     }
   }
 }
@@ -39,17 +45,23 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 40px;
-  padding: 8px;
+  padding: 8px 20px;
   border-bottom: 3px solid #cccccc;
   @media all and (min-width: 1024px) {
     height: 60px;
   }
   .header-left {
-    color: #000000;
     font-size: 8px;
     font-family: "Press Start 2P";
     @media all and (min-width: 1024px) {
       font-size: 12px;
+    }
+    a {
+      color: #000000;
+      text-decoration: none;
+      &:hover {
+        color: #fcc800;
+      }
     }
   }
   .header-right {
@@ -80,11 +92,12 @@ header {
 
 footer {
   padding: 12px;
+  background-color: #000000;
   text-align: center;
 }
 
 .subtitle {
-  padding: 20px 10px;
+  padding: 20px;
   color: #000000;
 }
 
@@ -96,10 +109,25 @@ footer {
   @media all and (min-width: 1024px) {
     display: grid;
 
-    grid-template-columns: 300px 300px 300px;
-    gap: 20px;
+    grid-template-columns: 30% 30% 30%;
+    gap: 2%;
   }
   img {
     padding-bottom: 10px;
+    animation: fadeup 1s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+  }
+}
+
+@keyframes fadeup {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

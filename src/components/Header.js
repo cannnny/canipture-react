@@ -6,7 +6,9 @@ const Header = () => {
   return (
     <header>
       <div className="header-left">
-        <h1>Canipture!</h1>
+        <Link to="/">
+          <h1>Canipture!</h1>
+        </Link>
       </div>
       <div className="header-right">
         {/* ホバーしたらアイコンの画像を変える */}
