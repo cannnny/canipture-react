@@ -7,18 +7,18 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import RouterConfig from "./Routes";
 
-const games = [
-  { name: "totk" },
-  { name: "spl" },
-  { name: "ac" },
-  { name: "mhsb" },
+const gameData = [
+  { name_en: "totk", title: "ゼルダの伝説 ティアーズ オブ ザ キングダム" },
+  { name_en: "spl", title: "Splatoon3" },
+  { name_en: "ac", title: "あつまれ どうぶつの森" },
+  { name_en: "mhsb", title: "モンスターハンター サンブレイク" },
 ];
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <RouterConfig games={games} />
+      <RouterConfig games={gameData} />
     </BrowserRouter>
   </React.StrictMode>
 );
