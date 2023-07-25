@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+import "./reset.css";
+import "./App.scss";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import RouterConfig from "./Routes";
 
 const games = [
   { name: "totk" },
@@ -16,7 +18,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App games={games} />
+      <RouterConfig games={games} />
     </BrowserRouter>
   </React.StrictMode>
 );
