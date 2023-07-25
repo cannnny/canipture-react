@@ -1,15 +1,18 @@
-// Swiper
-import Slider1 from "./Slider1.js";
-import Slider2 from "./Slider2.js";
+import Slider from "./Slider.js";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div className="home">
       <div className="slider">
-        <Slider1 name="totk" />
-        <Slider2 name="spl" />
-        <Slider1 name="ac" />
-        <Slider2 name="mhsb" />
+        {props.games.map((element, index) => {
+          return (
+            <Slider
+              key={index}
+              name={element.name_en}
+              isReverse={index % 2 === 0}
+            />
+          );
+        })}
       </div>
       <div className="main">
         <div className="container">

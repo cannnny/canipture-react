@@ -5,8 +5,8 @@ import "swiper/css";
 
 import { Link } from "react-router-dom";
 
-export default function Slider2(props) {
-  const swiperParams2 = {
+const Slider = (props) => {
+  const swiperParams = {
     modules: [Autoplay],
     slidesPerView: 1.5,
     spaceBetween: 10,
@@ -14,7 +14,7 @@ export default function Slider2(props) {
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
-      reverseDirection: true,
+      reverseDirection: props.isReverse,
     },
     speed: 7000,
     grabCursor: true,
@@ -24,7 +24,7 @@ export default function Slider2(props) {
 
   return (
     <>
-      <Swiper {...swiperParams2} className="swiper2">
+      <Swiper {...swiperParams}>
         {(() => {
           const slides = [];
           for (let i = 1; i < 10; i++) {
@@ -41,4 +41,6 @@ export default function Slider2(props) {
       </Swiper>
     </>
   );
-}
+};
+
+export default Slider;

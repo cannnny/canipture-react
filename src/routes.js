@@ -5,7 +5,7 @@ import Page from "./components/Page";
 const RouterConfig = (props) => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home games={props.games} />} />
       {props.games.map((element, index) => {
         return (
           <Route
