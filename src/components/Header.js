@@ -84,8 +84,8 @@ const Header = () => {
             </svg>
           </div>
         )}
-        {path !== `/ac` ? (
-          <Link to="/ac">
+        {path !== `/animalcrossing` ? (
+          <Link to="/animalcrossing">
             <svg
               id="_レイヤー_1"
               data-name="レイヤー 1"
