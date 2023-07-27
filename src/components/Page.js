@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Gallery from "./Gallery";
+// Modal.js読み込み
 
 const Page = (props) => {
   return (
@@ -11,7 +12,7 @@ const Page = (props) => {
       <div className="main-gallery">
         <Gallery name={props.path} />
         {/* スクロールに応じてサムネを表示させるようにしたい */}
-        {/* クリックしたら拡大させたい */}
+        {/* クリックしたら拡大させたい→Modal.js*/}
       </div>
     </>
   );
