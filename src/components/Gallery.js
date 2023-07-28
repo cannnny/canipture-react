@@ -38,8 +38,6 @@ const Gallery = (props) => {
         setIsModalOpen={() => {
           setIsModalOpen();
         }}
-        src={currentPictures.src}
-        id={currentPictures.index}
       />
     </>
   );
