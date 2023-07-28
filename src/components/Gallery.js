@@ -8,9 +8,12 @@ const getData = await client.get({
 
 const Gallery = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [clickedPic, setClickedPic] = useState("");
 
-  const openModal = () => {
+  const openModal = (e) => {
     setIsModalOpen(true);
+    const clickedPicSrc = e.currentTarget.src;
+    setClickedPic(clickedPicSrc);
   };
 
   const data = getData.contents;
@@ -22,19 +25,14 @@ const Gallery = (props) => {
       {currentPictures.map((element, index) => {
         return (
           <>
-            <img
-              key={index}
-              src={element.url}
-              id={index}
-              alt=""
-              onClick={openModal}
-            />
+            <img key={index} src={element.url} alt="" onClick={openModal} />
           </>
         );
       })}
       ;
       <Modal
         isModalOpen={isModalOpen}
+        src={clickedPic}
         setIsModalOpen={() => {
           setIsModalOpen();
         }}
