@@ -1,6 +1,5 @@
 import Header from "./Header";
 import Gallery from "./Gallery";
-// Modal.js読み込み
 
 const Page = (props) => {
   return (
