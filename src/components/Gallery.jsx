@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { client } from "./client";
+import { Client } from "./Client";
 import Modal from "./Modal";
 
-const getData = await client.get({
+const getData = await Client.get({
   endpoint: "pictures",
 });
 
