@@ -6,7 +6,8 @@ const Modal = (props) => {
   return (
     <>
       {props.isModalOpen ? (
-        <div className="overlay" onClick={closeModal}>
+        <div className="modal">
+          <div className="overlay" onClick={closeModal}></div>
           <div className="content">
             <img src={props.src} alt="" />
             <button onClick={closeModal}>close</button>

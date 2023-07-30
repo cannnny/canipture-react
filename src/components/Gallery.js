@@ -29,7 +29,7 @@ const Gallery = (props) => {
           </>
         );
       })}
-      ;
+
       <Modal
         isModalOpen={isModalOpen}
         src={clickedPic}
