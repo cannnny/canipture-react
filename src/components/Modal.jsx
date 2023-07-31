@@ -5,6 +5,7 @@ const Modal = (props) => {
 
   const closeModal = () => {
     setClosing(true);
+    document.body.style.overflowY = "auto";
   };
 
   useEffect(() => {

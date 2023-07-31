@@ -14,6 +14,7 @@ const Gallery = (props) => {
     setIsModalOpen(true);
     const clickedPicSrc = e.currentTarget.src;
     setClickedPic(clickedPicSrc);
+    document.body.style.overflowY = "hidden";
   };
 
   const data = getData.contents;
