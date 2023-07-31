@@ -24,7 +24,7 @@ const Modal = (props) => {
           <div className="overlay" onClick={closeModal}></div>
           <div className="content">
             <img src={props.src} alt="" />
-            <button onClick={closeModal}>close</button>
+            <button onClick={closeModal}></button>
           </div>
         </div>
       ) : (

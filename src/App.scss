@@ -148,11 +148,42 @@ footer {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
   }
+
   .content {
+    position: relative;
     z-index: 10;
     width: 70%;
     background-color: #ffffff;
     animation: fadein 0.5s;
+
+    button {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      background: #333333;
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 3px;
+        height: 25px;
+        background: #ffffff;
+        content: "";
+      }
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
   }
 }
 
