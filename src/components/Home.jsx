@@ -14,7 +14,7 @@ const Home = (props) => {
           );
         })}
       </div>
-      <div className="main">
+      <div className="explanation">
         <div className="container">
           <h1>Canipture!</h1>
           <h2>Canipture!とは</h2>
