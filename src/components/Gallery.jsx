@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Client } from "./Client";
 import Modal from "./Modal";
+import { mediaQuery, useMediaQuery } from "./Responsive";
 
 const getData = await Client.get({
   endpoint: "pictures",
@@ -21,23 +22,33 @@ const Gallery = (props) => {
   const currentData = data.find((picture) => picture.id === props.name);
   const currentPictures = currentData.pictures;
 
+  const isPc = useMediaQuery(mediaQuery.pc);
+
   return (
     <>
       {currentPictures.map((element, index) => {
         return (
           <>
-            <img key={index} src={element.url} alt="" onClick={openModal} />
+            <img
+              key={index}
+              src={element.url}
+              alt=""
+              onClick={isPc ? openModal : undefined}
+            />
           </>
         );
       })}
-
-      <Modal
-        isModalOpen={isModalOpen}
-        src={clickedPic}
-        setIsModalOpen={() => {
-          setIsModalOpen();
-        }}
-      />
+      {isPc ? (
+        <Modal
+          isModalOpen={isModalOpen}
+          src={clickedPic}
+          setIsModalOpen={() => {
+            setIsModalOpen();
+          }}
+        />
+      ) : (
+        <></>
+      )}
     </>
   );
 };
