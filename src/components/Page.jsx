@@ -10,8 +10,6 @@ const Page = (props) => {
       </div>
       <div className="main-gallery">
         <Gallery name={props.path} />
-        {/* スクロールに応じてサムネを表示させるようにしたい */}
-        {/* クリックしたら拡大させたい→Modal.js*/}
       </div>
     </>
   );
