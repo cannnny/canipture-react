@@ -4,6 +4,11 @@ body {
   font-family: "M PLUS 1", sans-serif;
 }
 
+// home
+.home {
+  height: 100vh;
+}
+
 .slider {
   background-color: #000000;
 
@@ -12,8 +17,7 @@ body {
     transition-timing-function: linear;
   }
 }
-.main {
-  height: 300px;
+.explanation {
   padding: 60px 40px;
   background-color: #ffffff;
   color: #000000;
@@ -24,7 +28,6 @@ body {
     h1 {
       display: none;
     }
-
     h2 {
       font-size: 30px;
       @media all and (min-width: 1024px) {
@@ -40,6 +43,15 @@ body {
   }
 }
 
+footer {
+  position: absolute;
+  width: 100%;
+  padding: 12px;
+  background-color: #000000;
+  text-align: center;
+}
+
+// pages
 header {
   display: flex;
   justify-content: space-between;
@@ -88,15 +100,6 @@ header {
       }
     }
   }
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 12px;
-  background-color: #000000;
-  text-align: center;
 }
 
 .subtitle {
@@ -191,7 +194,7 @@ footer {
 }
 
 .fadeout {
-  animation: fadeout 0.5s;
+  animation: fadeout 0.5s forwards;
 }
 
 @keyframes fadein {
