@@ -12,7 +12,7 @@ const Header = () => {
       </div>
       <div className="header-right">
         {path !== `/totk` ? (
-          <Link to="/totk">
+          <Link to="/totk" className="link-icon">
             <svg
               id="_レイヤー_1"
               data-name="レイヤー 1"
@@ -49,7 +49,7 @@ const Header = () => {
           </div>
         )}
         {path !== `/spl` ? (
-          <Link to="/spl">
+          <Link to="/spl" className="link-icon">
             <svg
               id="_レイヤー_1"
               data-name="レイヤー 1"
@@ -82,7 +82,7 @@ const Header = () => {
           </div>
         )}
         {path !== `/animalcrossing` ? (
-          <Link to="/animalcrossing">
+          <Link to="/animalcrossing" className="link-icon">
             <svg
               id="_レイヤー_1"
               data-name="レイヤー 1"
@@ -107,7 +107,7 @@ const Header = () => {
           </div>
         )}
         {path !== `/mhsb` ? (
-          <Link to="/mhsb">
+          <Link to="/mhsb" className="link-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
               <g id="_瓶" data-name="瓶">
                 <rect y="0" width="46.82" height="19.55" />
@@ -281,7 +281,7 @@ const Header = () => {
             </svg>
           </div>
         )}
-        <Link to="/">
+        <Link to="/" className="link-icon">
           <svg
             id="_レイヤー_1"
             data-name="レイヤー 1"

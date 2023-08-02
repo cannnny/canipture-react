@@ -10,6 +10,8 @@ body {
 }
 
 .slider {
+  border-top: 10px solid #000000;
+  border-bottom: 10px solid #000800;
   background-color: #000000;
 
   .swiper-wrapper {
@@ -57,7 +59,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 40px;
-  padding: 8px 20px;
+  padding: 8px 15px;
   border-bottom: 3px solid #cccccc;
   @media all and (min-width: 1024px) {
     height: 60px;
@@ -86,14 +88,21 @@ header {
 
     a,
     div {
-      width: 20px;
-      height: 20px;
+      width: 23px;
+      height: 23px;
 
       @media all and (min-width: 1024px) {
         width: 35px;
         height: 35px;
       }
     }
+
+    .link-icon {
+      svg {
+        fill: #c0c0c0;
+      }
+    }
+
     a:hover {
       svg {
         fill: #fcc800;
@@ -103,14 +112,18 @@ header {
 }
 
 .subtitle {
-  padding: 20px;
+  padding: 15px;
   color: #000000;
+  font-size: 13px;
+  @media all and (min-width: 1024px) {
+    font-size: 16px;
+  }
 }
 
 .main-gallery {
   justify-content: center;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 15px;
 
   @media all and (min-width: 1024px) {
     display: grid;
@@ -122,20 +135,7 @@ header {
   }
 }
 
-@keyframes fadeup {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+// modal
 .modal {
   display: flex;
   justify-content: center;
@@ -192,7 +192,6 @@ header {
     }
   }
 }
-
 .fadeout {
   animation: fadeout 0.5s forwards;
 }
