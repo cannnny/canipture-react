@@ -30,7 +30,10 @@ const Slider = (props) => {
           for (let i = 1; i < 10; i++) {
             slides.push(
               <SwiperSlide key={i}>
+                {/* hoverで画像暗くするとかはしたい */}
                 <Link to={props.name}>
+                  {/* swはとりたい */}
+                  {/* microCMSから取得したい */}
                   <img src={`../pictures/sw/${props.name}-s${i}.jpg`} alt="" />
                 </Link>
               </SwiperSlide>

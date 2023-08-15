@@ -6,6 +6,7 @@ const RouterConfig = (props) => {
   return (
     <Routes>
       <Route path="/" element={<Home games={props.games} />} />
+      {/* ここはpathを/:idとしてコンポート側で該当のデータ受け取るのがベター */}
       {props.games.map((element, index) => {
         return (
           <Route

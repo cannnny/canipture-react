@@ -34,6 +34,7 @@ const Gallery = (props) => {
               src={element.url}
               alt=""
               onClick={isPc ? openModal : undefined}
+              // モーダル開けるのが伝わりづらいのでhoverアクションつける
             />
           </>
         );
