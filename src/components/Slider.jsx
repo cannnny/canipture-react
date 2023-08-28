@@ -31,7 +31,7 @@ const Slider = (props) => {
             slides.push(
               <SwiperSlide key={i}>
                 <Link to={props.name}>
-                  <img src={`../pictures/sw/${props.name}-s${i}.jpg`} alt="" />
+                  <img src={`../pictures/${props.name}-s${i}.jpg`} alt="" />
                 </Link>
               </SwiperSlide>
             );
