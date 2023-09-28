@@ -217,3 +217,12 @@ header {
     transform: translateY(20px);
   }
 }
+
+// あとで移動
+.notFound {
+  color: #000000;
+  text-align: center;
+  a {
+    color: inherit;
+  }
+}

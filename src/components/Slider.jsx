@@ -3,8 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-import { Link } from "react-router-dom";
-
 const Slider = (props) => {
   const swiperParams = {
     modules: [Autoplay],
@@ -25,19 +23,13 @@ const Slider = (props) => {
   return (
     <>
       <Swiper {...swiperParams}>
-        {(() => {
-          const slides = [];
-          for (let i = 1; i < 10; i++) {
-            slides.push(
-              <SwiperSlide key={i}>
-                <Link to={props.name}>
-                  <img src={`../pictures/${props.name}-s${i}.jpg`} alt="" />
-                </Link>
-              </SwiperSlide>
-            );
-          }
-          return slides;
-        })()}
+        {props.data.map((element) => {
+          return (
+            <SwiperSlide key={element.id}>
+              <img src={element.picture.url} alt="" />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </>
   );

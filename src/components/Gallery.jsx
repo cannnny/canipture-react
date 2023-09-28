@@ -3,7 +3,7 @@ import { client } from "./Client";
 import Modal from "./Modal";
 import { mediaQuery, useMediaQuery } from "./Responsive";
 
-const getData = await client.get({
+const getData = await client.get({         
   endpoint: "gallery",
 });
 
@@ -34,6 +34,7 @@ const Gallery = (props) => {
               src={element.url}
               alt=""
               onClick={isPc ? openModal : undefined}
+              // モーダル開けるのが伝わりづらいのでhoverアクションつける
             />
           </>
         );
