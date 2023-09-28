@@ -8,11 +8,13 @@ import "./reset.css";
 import "./App.scss";
 
 const gameData = [
-  // 名前もうちょい長くパッと見で判別できるように。キャメルケース
-  { name_en: "totk", title: "ゼルダの伝説 ティアーズ オブ ザ キングダム" },
-  { name_en: "spl", title: "Splatoon3" },
-  { name_en: "animalcrossing", title: "あつまれ どうぶつの森" },
-  { name_en: "mhsb", title: "モンスターハンター サンブレイク" },
+  {
+    title_en: "tears-of-the-kingdom",
+    title: "ゼルダの伝説 ティアーズ オブ ザ キングダム",
+  },
+  { title_en: "splatoon3", title: "Splatoon3" },
+  { title_en: "animal-crossing", title: "あつまれ どうぶつの森" },
+  { title_en: "monster-hunter", title: "モンスターハンター サンブレイク" },
 ];
 
 const App = () => {
@@ -25,8 +27,8 @@ const App = () => {
           return (
             <Route
               key={index}
-              path={`/${element.name_en}`}
-              element={<Page title={element.title} path={element.name_en} />}
+              path={`/${element.title_en}`}
+              element={<Page title={element.title} path={element.title_en} />}
             />
           );
         })}

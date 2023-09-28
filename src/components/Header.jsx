@@ -11,8 +11,8 @@ const Header = () => {
         </Link>
       </div>
       <div className="header-right">
-        {path !== `/totk` ? (
-          <Link to="/totk" className="link-icon">
+        {path !== `/tears-of-the-kingdom` ? (
+          <Link to="/tears-of-the-kingdom" className="link-icon">
             <svg
               id="_レイヤー_1"
               data-name="レイヤー 1"
@@ -48,8 +48,8 @@ const Header = () => {
             </svg>
           </div>
         )}
-        {path !== `/spl` ? (
-          <Link to="/spl" className="link-icon">
+        {path !== `/splatoon3` ? (
+          <Link to="/splatoon3" className="link-icon">
             <svg
               id="_レイヤー_1"
               data-name="レイヤー 1"
@@ -81,8 +81,9 @@ const Header = () => {
             </svg>
           </div>
         )}
-        {path !== `/animalcrossing` ? (
-          <Link to="/animalcrossing" className="link-icon">
+        {path !== `/animal-crossing` ? (
+          // ここのLink or divを変数で判別して出し分けたい
+          <Link to="/animal-crossing" className="link-icon">
             <svg
               id="_レイヤー_1"
               data-name="レイヤー 1"
@@ -106,8 +107,8 @@ const Header = () => {
             </svg>
           </div>
         )}
-        {path !== `/mhsb` ? (
-          <Link to="/mhsb" className="link-icon">
+        {path !== `/monster-hunter` ? (
+          <Link to="/monster-hunter" className="link-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
               <g id="_瓶" data-name="瓶">
                 <rect y="0" width="46.82" height="19.55" />

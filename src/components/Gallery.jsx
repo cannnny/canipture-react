@@ -4,7 +4,7 @@ import Modal from "./Modal";
 import { mediaQuery, useMediaQuery } from "./Responsive";
 
 const getData = await Client.get({
-  endpoint: "pictures",
+  endpoint: "gallery",
 });
 
 const Gallery = (props) => {
