@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Client } from "./Client";
+import { client } from "./Client";
 import Modal from "./Modal";
 import { mediaQuery, useMediaQuery } from "./Responsive";
 
-const getData = await Client.get({
+const getData = await client.get({         
   endpoint: "gallery",
 });
 
