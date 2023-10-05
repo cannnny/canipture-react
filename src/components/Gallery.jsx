@@ -1,16 +1,12 @@
 import { useState } from "react";
-import { client } from "./Client";
 import Modal from "./Modal";
 import { mediaQuery, useMediaQuery } from "./Responsive";
-
-const getData = await client.get({         
-  endpoint: "gallery",
-});
 
 const Gallery = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [clickedPic, setClickedPic] = useState("");
 
+  // モーダル
   const openModal = (e) => {
     setIsModalOpen(true);
     const clickedPicSrc = e.currentTarget.src;
@@ -18,25 +14,20 @@ const Gallery = (props) => {
     document.body.style.overflowY = "hidden";
   };
 
-  const data = getData.contents;
-  const currentData = data.find((picture) => picture.id === props.name);
-  const currentPictures = currentData.pictures;
-
+  // メディアクエリ
   const isPc = useMediaQuery(mediaQuery.pc);
 
   return (
     <>
-      {currentPictures.map((element, index) => {
+      {props.currentPictures.map((url) => {
         return (
-          <>
-            <img
-              key={index}
-              src={element.url}
-              alt=""
-              onClick={isPc ? openModal : undefined}
-              // モーダル開けるのが伝わりづらいのでhoverアクションつける
-            />
-          </>
+          <img
+            key={url}
+            src={url}
+            alt=""
+            onClick={isPc ? openModal : undefined}
+            // モーダル開けるのが伝わりづらいのでhoverアクションつける
+          />
         );
       })}
       {isPc ? (
