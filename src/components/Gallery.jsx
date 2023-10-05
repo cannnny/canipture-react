@@ -19,10 +19,10 @@ const Gallery = (props) => {
 
   return (
     <>
-      {props.currentPictures.map((url) => {
+      {props.currentPictures.map((url, index) => {
         return (
           <img
-            key={url}
+            key={index}
             src={url}
             alt=""
             onClick={isPc ? openModal : undefined}
