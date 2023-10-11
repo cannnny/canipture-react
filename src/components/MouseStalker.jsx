@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 
 const MouseStalker = (props) => {
-  // const pointer = document.getElementById("pointer");
-  // console.log(pointer);
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
 
