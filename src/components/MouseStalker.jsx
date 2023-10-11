@@ -12,22 +12,10 @@ const MouseStalker = (props) => {
       setMouseY(e.clientY);
     };
 
-    // const targets = document.querySelectorAll("slider-link");
-    // for (let i = 0; i < targets.length; i++) {
-    //   targets[i].addEventListener("mouseover", (e) => {
-    //     pointer.classList.add("isHover");
-    //   });
-    // }
-
     window.addEventListener("mousemove", mouseMoveListener);
 
     return () => {
       window.removeEventListener("mousemove", mouseMoveListener);
-      // for (let i = 0; i < targets.length; i++) {
-      //   targets[i].removeEventListener("mouseover", (e) => {
-      //     pointer.classList.remove("isHover");
-      //   });
-      // }
     };
   }, []);
 
