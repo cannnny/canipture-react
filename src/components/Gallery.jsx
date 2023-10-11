@@ -23,6 +23,7 @@ const Gallery = (props) => {
         return (
           <img
             key={index}
+            className="gallery-picture"
             src={url}
             alt=""
             onClick={isPc ? openModal : undefined}
