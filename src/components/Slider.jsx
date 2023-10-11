@@ -23,9 +23,9 @@ const Slider = (props) => {
   return (
     <>
       <Swiper {...swiperParams}>
-        {props.data.map((element) => {
+        {props.data.map((element, index) => {
           return (
-            <SwiperSlide key={element.id}>
+            <SwiperSlide key={index}>
               <img src={element.picture.url} alt="" />
             </SwiperSlide>
           );
