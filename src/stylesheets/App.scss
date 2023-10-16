@@ -1,0 +1,8 @@
+@use "variables";
+
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1&family=Press+Start+2P&display=swap");
+
+body {
+  font-family: "M PLUS 1", sans-serif;
+  background-color: variables.$light-color;
+}

@@ -1,0 +1,10 @@
+@use "variables";
+
+.notFound {
+  color: variables.$dark-color;
+  text-align: center;
+
+  a {
+    color: inherit;
+  }
+}

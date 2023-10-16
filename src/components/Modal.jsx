@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import "../stylesheets/modal.scss";
+
 const Modal = (props) => {
   const [closing, setClosing] = useState(false);
 

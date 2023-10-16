@@ -4,8 +4,8 @@ import Home from "./components/Home";
 import Page from "./components/Page";
 import NotFound from "./pages/NotFound";
 
-import "./reset.css";
-import "./App.scss";
+import "./stylesheets/reset.css";
+import "./stylesheets/App.scss";
 
 const App = () => {
   return (

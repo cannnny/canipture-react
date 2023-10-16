@@ -1,0 +1,21 @@
+@use "variables";
+
+.slider {
+  background-color: variables.$dark-color;
+  border-top: 10px solid variables.$dark-color;
+  border-bottom: 10px solid variables.$dark-color;
+
+  .swiper-wrapper {
+    margin-bottom: 10px;
+    transition-timing-function: linear;
+  }
+
+  a {
+    filter: grayscale(100%);
+
+    &:hover {
+      filter: grayscale(0%);
+      transition: 0.4s;
+    }
+  }
+}

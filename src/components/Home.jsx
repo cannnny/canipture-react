@@ -6,6 +6,8 @@ import { useState } from "react";
 import { client } from "./Client";
 import { Link } from "react-router-dom";
 
+import "../stylesheets/home.scss";
+
 // カテゴリーごとに各々取得,slideにわたす
 const galleryData = [];
 for (let i = 0; i < GameData.length; i++) {
@@ -19,7 +21,7 @@ for (let i = 0; i < GameData.length; i++) {
 }
 
 const Home = () => {
-  const [color, setColor] = useState("#fcc800");
+  const [color, setColor] = useState("variables.$main-color");
   const [scale, setScale] = useState(1);
   const handleHover = (color, scale) => {
     setColor(color);
@@ -37,7 +39,7 @@ const Home = () => {
               to={element.title_en}
               key={index}
               onMouseEnter={() => handleHover(element.color, 2)}
-              onMouseLeave={() => handleHover("#fcc800", 1)}
+              onMouseLeave={() => handleHover("variables.$main-color", 1)}
             >
               <Slider data={galleryData[index]} isReverse={index % 2 === 0} />
             </Link>

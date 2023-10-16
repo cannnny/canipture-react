@@ -1,0 +1,70 @@
+@use "variables";
+
+.home {
+  height: 100vh;
+}
+
+#pointer {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  background-color: variables.$main-color;
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.001s transform;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+  }
+}
+
+.explanation {
+  padding: 60px 40px;
+  color: variables.$dark-color;
+  background-color: variables.$light-color;
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+
+    h1 {
+      display: none;
+    }
+
+    h2 {
+      font-size: 30px;
+
+      @media all and (min-width: 1024px) {
+        font-size: 40px;
+      }
+    }
+
+    p {
+      margin-top: 50px;
+
+      @media all and (min-width: 1024px) {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  background-color: variables.$dark-color;
+}

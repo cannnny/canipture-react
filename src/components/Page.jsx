@@ -6,6 +6,8 @@ import { client } from "./Client";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+import "../stylesheets/page.scss";
+
 // microCMSのカテゴリーと現在のURLが一致するデータを取得
 const Page = () => {
   const currentUrl = useParams();

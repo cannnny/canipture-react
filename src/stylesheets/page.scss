@@ -1,0 +1,95 @@
+@use "variables";
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 8px 15px;
+  border-bottom: 3px solid #ccc;
+
+  @media all and (min-width: 1024px) {
+    height: 60px;
+  }
+
+  .header-left {
+    font-family: "Press Start 2P";
+    font-size: 8px;
+
+    @media all and (min-width: 1024px) {
+      font-size: 12px;
+    }
+
+    a {
+      color: variables.$dark-color;
+      text-decoration: none;
+
+      &:hover {
+        color: variables.$main-color;
+      }
+    }
+  }
+
+  .header-right {
+    display: flex;
+    gap: 5px;
+
+    @media all and (min-width: 1024px) {
+      gap: 10px;
+    }
+
+    a,
+    div {
+      width: 23px;
+      height: 23px;
+
+      @media all and (min-width: 1024px) {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    .link-icon {
+      svg {
+        fill: #c0c0c0;
+      }
+    }
+
+    a:hover {
+      svg {
+        fill: variables.$main-color;
+      }
+    }
+  }
+}
+
+.subtitle {
+  padding: 15px;
+  font-size: 13px;
+  color: variables.$dark-color;
+
+  @media all and (min-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+.main-gallery {
+  justify-content: center;
+  width: 100%;
+  padding: 0 15px;
+
+  @media all and (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+  }
+
+  .gallery-picture {
+    padding: 5px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      transition: 0.3s;
+    }
+  }
+}
