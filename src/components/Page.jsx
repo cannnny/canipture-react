@@ -1,6 +1,7 @@
 import Header from "./Header";
 import Gallery from "./Gallery";
 import GameData from "./GameData";
+import NotFound from "../pages/NotFound";
 
 import { client } from "./Client";
 import { useEffect, useState } from "react";
@@ -51,7 +52,7 @@ const Page = () => {
     <>
       <Header />
       <div className="subtitle">
-        <h2>{currentPageData ? currentPageData.title : "Loading..."}</h2>
+        <h2>{currentPageData ? currentPageData.title : <NotFound />}</h2>
       </div>
       <div className="main-gallery">
         {currentPictures && <Gallery currentPictures={currentPictures} />}
