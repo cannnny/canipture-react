@@ -8,9 +8,10 @@ Canipture!は、Nintendo Switchで遊べるゲームのスクリーンショッ�
 https://canipture.vercel.app/
 <br>
 <br>
+<br>
 
 ## 動作確認済み環境
-- macOS Ventura 13.6.1
+* macOS Ventura 13.6.1
 * node v18.17.1
 * npm v9.6.7
 <br>
