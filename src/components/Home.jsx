@@ -49,7 +49,6 @@ const Home = () => {
       <div className="explanation">
         <div className="container">
           <h1>Canipture!</h1>
-          <h2>Canipture!</h2>
           <p>
             Nintendo
             Switchで遊べるゲームのスクリーンショットを集めたギャラリーサイトです。画像をクリックするとゲームごとのページに遷移します。
