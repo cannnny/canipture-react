@@ -27,9 +27,13 @@
 }
 
 .explanation {
-  padding: 60px 40px;
+  padding: 40px 20px;
   color: variables.$dark-color;
   background-color: variables.$light-color;
+  
+  @media all and (min-width: 1024px) {
+    padding: 60px 40px;
+  }
 
   .container {
     width: 90%;
