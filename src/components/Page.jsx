@@ -57,6 +57,7 @@ const Page = () => {
       <div className="main-gallery">
         {currentPictures && <Gallery currentPictures={currentPictures} />}
       </div>
+      <footer class="footer">@2023 YUMI DOTERA</footer>
     </>
   );
 };
