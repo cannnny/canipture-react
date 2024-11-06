@@ -7,7 +7,7 @@ import "../stylesheets/slider.scss";
 const Slider = (props) => {
   const swiperParams = {
     modules: [Autoplay],
-    slidesPerView: 3.5,
+    slidesPerView: 1.5,
     spaceBetween: 10,
     loop: true,
     autoplay: {
@@ -19,6 +19,12 @@ const Slider = (props) => {
     grabCursor: true,
     watchSlidesProgress: true,
     threshold: 999999,
+
+    breakpoints: {
+      1024: {
+        slidesPerView: 3.5,
+      }
+    },
   };
 
   return (
