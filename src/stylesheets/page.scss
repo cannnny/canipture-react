@@ -82,10 +82,18 @@ header {
     display: grid;
     grid-template-columns: 30% 30% 30%;
   }
+}
 
-  .gallery-picture {
-    padding: 5px;
+.gallery-picture {
+  padding: 5px;
+  opacity: 0;
+  visibility: hidden;
 
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
+    animation: fadein 0.5s;
+    
     &:hover {
       cursor: pointer;
       opacity: 0.6;
