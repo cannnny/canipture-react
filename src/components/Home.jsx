@@ -56,7 +56,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <footer>@2023 YUMI DOTERA</footer>
+      <footer class="footer">@2023 YUMI DOTERA</footer>
     </div>
   );
 };
