@@ -1,12 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "./Modal";
 import { mediaQuery, useMediaQuery } from "./Responsive";
 
 const Gallery = (props) => {
+  // 画像の表示
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if(entry.isIntersecting) {
+          console.log("監視中");
+          entry.target.classList.add("is-show");
+          observer.unobserve(entry.target);
+        }
+      })
+    });
+  
+    document.querySelectorAll(".gallery-picture").forEach((element) => {
+      observer.observe(element);
+    })
+
+    return () => {
+      document.querySelectorAll(".gallery-picture").forEach((element) => {
+        observer.unobserve(element);
+      });
+    };
+  }, []);
+
+  
+  // モーダル
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [clickedPic, setClickedPic] = useState("");
 
-  // モーダル
   const openModal = (e) => {
     setIsModalOpen(true);
     const clickedPicSrc = e.currentTarget.src;
@@ -27,7 +51,6 @@ const Gallery = (props) => {
             src={url}
             alt=""
             onClick={isPc ? openModal : undefined}
-            // モーダル開けるのが伝わりづらいのでhoverアクションつける
           />
         );
       })}
