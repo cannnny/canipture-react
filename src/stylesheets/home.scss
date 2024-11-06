@@ -1,9 +1,5 @@
 @use "variables";
 
-.home {
-  height: 100vh;
-}
-
 #pointer {
   position: fixed;
   top: -5px;
@@ -40,12 +36,7 @@
     margin: 0 auto;
 
     h1 {
-      display: none;
-    }
-
-    h2 {
       font-size: 30px;
-
       @media all and (min-width: 1024px) {
         font-size: 40px;
       }
@@ -62,9 +53,10 @@
 }
 
 footer {
-  position: absolute;
+  bottom: 0;
   width: 100%;
   padding: 12px;
   text-align: center;
   background-color: variables.$dark-color;
+  color: #fff;
 }

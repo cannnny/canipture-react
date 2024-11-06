@@ -1,21 +1,44 @@
 @use "variables";
 
+// スライダー全体
 .slider {
   background-color: variables.$dark-color;
-  border-top: 10px solid variables.$dark-color;
   border-bottom: 10px solid variables.$dark-color;
+}
 
-  .swiper-wrapper {
-    margin-bottom: 10px;
-    transition-timing-function: linear;
-  }
+// スライダーのリンク
+.slider-link {
+  display: block;
+  height: calc((100vh - 10px) / 4);
+  filter: grayscale(100%);
 
-  a {
-    filter: grayscale(100%);
-
-    &:hover {
-      filter: grayscale(0%);
-      transition: 0.4s;
-    }
+  &:hover {
+    filter: grayscale(0%);
+    transition: 0.4s;
   }
 }
+
+// swiper
+.swiper {
+  width: 100%;
+  height: 100%;
+  border-top: 10px solid variables.$dark-color;
+}
+
+.swiper-wrapper {
+  margin-bottom: 10px;
+  transition-timing-function: linear;
+
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
